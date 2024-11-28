@@ -1,7 +1,12 @@
+.to-do {
+    margin-top: 10px;
+}
+
 .todo-item {
     border: black solid 1px;
-    margin-top: 10px;
-    text-align: center;
+    display: inline-block;
+    width: 400px;
+    height: 25px;
 }
 
 .done {

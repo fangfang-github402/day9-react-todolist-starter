@@ -1,8 +1,10 @@
-.todo-list{
+.todo-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.title{
+
+.title {
     font-weight: bold;
+    font-size: 25px;
 }

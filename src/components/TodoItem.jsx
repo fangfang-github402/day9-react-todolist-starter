@@ -10,11 +10,11 @@ const TodoItem = (props) => {
     const handleDelete = () => {
         dispatch({type: 'DELETE', payload: props.todoItem.id})
     };
-    return (<div>
+    return (<div className={"to-do"}>
             <span className={"todo-item"} onClick={handleDone}>
                 {props.todoItem.done ? <span className={"done"}>{props.todoItem.text}</span> : props.todoItem.text}
             </span>
-        <button onClick={handleDelete}>X</button>
+        <button style={{marginLeft: "10px", height: "25px"}} onClick={handleDelete}>X</button>
     </div>)
 }
 

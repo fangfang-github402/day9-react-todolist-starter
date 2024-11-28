@@ -1,0 +1,13 @@
+input {
+    width: 250px;
+    height: 20px;
+}
+
+.add-button {
+    background: dodgerblue;
+    border: none;
+    width: 50px;
+    padding: 5px;
+    color: white;
+    margin-left: 10px;
+}

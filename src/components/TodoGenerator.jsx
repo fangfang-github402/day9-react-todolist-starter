@@ -15,8 +15,15 @@ const TodoGenerator = () => {
         dispatch({type: 'ADD', payload: text})
     };
     return (<div>
-        <input value={text} onChange={handleChange}/>
-        <button style={{background: "dodgerblue", border: "none" ,width:"50px",padding: "5px",color: "white", marginLeft: "10px"}} onClick={handleAdd}>add
+        <input value={text} onChange={handleChange} style={{width: "250px", height: "20px"}}/>
+        <button style={{
+            background: "dodgerblue",
+            border: "none",
+            width: "50px",
+            padding: "5px",
+            color: "white",
+            marginLeft: "10px"
+        }} onClick={handleAdd}>add
         </button>
     </div>)
 }

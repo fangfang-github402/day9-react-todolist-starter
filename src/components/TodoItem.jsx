@@ -14,7 +14,7 @@ const TodoItem = (props) => {
             <span className={"todo-item"} onClick={handleDone}>
                 {props.todoItem.done ? <span className={"done"}>{props.todoItem.text}</span> : props.todoItem.text}
             </span>
-        <button style={{marginLeft: "10px", height: "25px"}} onClick={handleDelete}>X</button>
+        <button onClick={handleDelete}>X</button>
     </div>)
 }
 

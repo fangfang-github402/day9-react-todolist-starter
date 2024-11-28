@@ -12,3 +12,8 @@
 .done {
     text-decoration-line: line-through;
 }
+
+button{
+    marginLeft: 10px;
+    height: 25px
+}

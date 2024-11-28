@@ -1,6 +1,9 @@
+import './TodoItem.css'
 const TodoItem =(props) =>{
     return(
-        <div>{props.todoItem.text}</div>
+        <div className={"todo-item"}>
+            {props.todoItem.text}
+        </div>
     )
 }
 

@@ -1,0 +1,6 @@
+.todo-item{
+    border: black solid 1px;
+    margin-top: 10px;
+    text-align: center;
+    /*text-decoration-line:line-through;*/
+}

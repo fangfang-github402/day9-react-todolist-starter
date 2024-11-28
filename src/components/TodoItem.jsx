@@ -7,12 +7,14 @@ const TodoItem = (props) => {
     const handleDone = () => {
         dispatch({type: 'DONE', payload: props.todoItem.id})
     };
+    const handleDelete = () => {
+        dispatch({type: 'DELETE', payload: props.todoItem.id})
+    };
     return (<div>
             <span className={"todo-item"} onClick={handleDone}>
-                {props.todoItem.done
-                    ? <span className={"done"}>{props.todoItem.text}</span>
-                    : props.todoItem.text}
+                {props.todoItem.done ? <span className={"done"}>{props.todoItem.text}</span> : props.todoItem.text}
             </span>
+        <button onClick={handleDelete}>X</button>
     </div>)
 }
 

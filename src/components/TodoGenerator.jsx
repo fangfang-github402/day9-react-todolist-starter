@@ -16,7 +16,7 @@ const TodoGenerator = () => {
     };
     return (<div>
         <input value={text} onChange={handleChange}/>
-        <button style={{background: "dodgerblue", color: "white", marginLeft: "10px"}} onClick={handleAdd}>add
+        <button style={{background: "dodgerblue", border: "none" ,width:"50px",padding: "5px",color: "white", marginLeft: "10px"}} onClick={handleAdd}>add
         </button>
     </div>)
 }

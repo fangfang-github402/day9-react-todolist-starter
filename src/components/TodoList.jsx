@@ -4,7 +4,7 @@ import TodoGenerator from "./TodoGenerator";
 const TodoList = () => {
     return (
         <div>
-            <div>TodoList</div>
+            <div>Todo List</div>
             <TodoGroup/>
             <TodoGenerator/>
         </div>

@@ -1,6 +1,7 @@
 import {useContext, useState} from "react";
 import {TodoContext} from "../App";
 import './TodoGenerator.css';
+import {addTodo} from "../api/todo";
 
 const TodoGenerator = () => {
     const {dispatch} = useContext(TodoContext);
@@ -13,8 +14,13 @@ const TodoGenerator = () => {
 
 
     const handleAdd = () => {
-        if(text.trim()){
-            dispatch({type: 'ADD', payload: text})
+        if (text.trim()) {
+            const newTodoItem = {text: text, done: false}
+            addTodo(newTodoItem).then(
+                (todo) => {
+                    dispatch({type: 'ADD', payload: text})
+                }
+            )
         }
     };
     return (<div>

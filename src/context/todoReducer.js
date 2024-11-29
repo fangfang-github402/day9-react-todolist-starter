@@ -1,4 +1,6 @@
-export const initialState = [];
+export const initialState = [
+    {id: Date.now(), text: 'clara done', done: true}
+];
 
 export const todoReducer = (state, action) => {
     switch (action.type) {

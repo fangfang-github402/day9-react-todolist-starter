@@ -3,12 +3,13 @@ import {useContext} from "react";
 import {TodoContext} from "../App";
 import {Button} from "antd";
 import {DeleteOutlined} from "@ant-design/icons";
-import {deleteTodo} from "../api/todo";
+import {deleteTodo, updateTodoStatus} from "../api/todo";
 
 const TodoItem = (props) => {
     const {dispatch} = useContext(TodoContext);
     const handleDone = () => {
-        dispatch({type: 'DONE', payload: props.todoItem.id})
+        const updatedTodoItem = {id: props.todoItem.id, text: props.todoItem.text, done: !props.todoItem.done};
+        updateTodoStatus(updatedTodoItem).then(dispatch({type: 'DONE', payload: props.todoItem.id}))
     };
     const handleDelete = () => {
         deleteTodo(props.todoItem.id).then(dispatch({type: 'DELETE', payload: props.todoItem.id}))

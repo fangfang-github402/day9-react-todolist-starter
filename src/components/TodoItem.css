@@ -13,8 +13,8 @@
     text-decoration-line: line-through;
 }
 
-Button {
+.todo-item-button {
     margin-left: 10px;
-    /*height: 20px;*/
-    width: 10px;
+    height: 25px;
+    width: 40px;
 }

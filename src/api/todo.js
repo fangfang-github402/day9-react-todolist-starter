@@ -20,6 +20,6 @@ export const deleteTodo = async (id) => {
     return response.data;
 }
 
-export const updateTodoStatus = async (updatedTodoItem) => {
+export const updateTodo = async (updatedTodoItem) => {
     const response = await instance.put("/todoItem/" + updatedTodoItem.id, updatedTodoItem);
 }

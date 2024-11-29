@@ -1,5 +1,4 @@
-export const initialState = [
-];
+export const initialState = [];
 
 export const todoReducer = (state, action) => {
     switch (action.type) {
@@ -12,6 +11,10 @@ export const todoReducer = (state, action) => {
         case 'DELETE':
             return [...state.filter(todo => {
                 return todo.id !== action.payload;
+            })]
+        case 'UPDATE':
+            return [...state.map(todo => {
+                return todo.id === action.id ? {id: todo.id, text: action.newText, done: todo.done} : todo;
             })]
         case 'INIT':
             return action.payload;

@@ -13,10 +13,12 @@ const TodoGenerator = () => {
 
 
     const handleAdd = () => {
-        dispatch({type: 'ADD', payload: text})
+        if(text.trim()){
+            dispatch({type: 'ADD', payload: text})
+        }
     };
     return (<div>
-        <input value={text} onChange={handleChange}/>
+        <input value={text} maxLength={100} onChange={handleChange}/>
         <button className={"add-button"} onClick={handleAdd}>add
         </button>
     </div>)

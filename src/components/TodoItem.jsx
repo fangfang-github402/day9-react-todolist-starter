@@ -1,6 +1,7 @@
 import './TodoItem.css'
 import {useContext} from "react";
 import {TodoContext} from "../App";
+import {Button} from "antd";
 
 const TodoItem = (props) => {
     const {dispatch} = useContext(TodoContext);
@@ -14,7 +15,7 @@ const TodoItem = (props) => {
             <span className={"todo-item"} onClick={handleDone}>
                 {props.todoItem.done ? <span className={"done"}>{props.todoItem.text}</span> : props.todoItem.text}
             </span>
-        <button onClick={handleDelete}>X</button>
+        <Button color="danger"  variant="solid" onClick={handleDelete}>X</Button>
     </div>)
 }
 

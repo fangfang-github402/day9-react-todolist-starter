@@ -2,6 +2,7 @@ import {useContext, useState} from "react";
 import {TodoContext} from "../App";
 import './TodoGenerator.css';
 import {addTodo} from "../api/todo";
+import {Button} from "antd";
 
 const TodoGenerator = () => {
     const {dispatch} = useContext(TodoContext);
@@ -25,8 +26,11 @@ const TodoGenerator = () => {
     };
     return (<div>
         <input value={text} maxLength={100} onChange={handleChange}/>
-        <button className={"add-button"} onClick={handleAdd}>add
-        </button>
+        {/*<button className={"add-button"} onClick={handleAdd}>add*/}
+        {/*</button>*/}
+        <Button color="primary" variant="solid" onClick={handleAdd}>
+            add
+        </Button>
     </div>)
 }
 

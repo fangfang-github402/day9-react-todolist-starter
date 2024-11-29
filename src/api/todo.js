@@ -12,6 +12,11 @@ export const getTodoList = async () => {
 }
 
 export const addTodo = async (newTodoItem) => {
-    const response =await instance.post("/todoItem", newTodoItem)
-    return response.data
+    const response = await instance.post("/todoItem", newTodoItem);
+    return response.data;
+}
+
+export const deleteTodo = async (id) => {
+    const response = await instance.delete("/todoItem/" + id);
+    return response.data;
 }

@@ -14,6 +14,8 @@ export const todoReducer = (state, action) => {
             return [...state.filter(todo => {
                 return todo.id !== action.payload;
             })]
+        case 'INIT':
+            return action.payload;
         default:
             return state;
     }

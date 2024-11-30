@@ -1,0 +1,15 @@
+.help-page {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.help-page h1, .help-page h2 {
+    color: #333;
+}
+
+.help-page p, .help-page ol, .help-page ul {
+    line-height: 1.6;
+    color: #666;
+}

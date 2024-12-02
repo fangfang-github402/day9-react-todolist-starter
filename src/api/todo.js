@@ -1,12 +1,11 @@
 import axios from "axios";
-import async from "async";
+import instance from "./interceptor";
 
-const instance = axios.create({
-    baseURL: "https://67495c7c868020296630aabd.mockapi.io/todo", timeout: 5000
-});
+
 
 export const getTodoList = async () => {
     const response = await instance.get("/todoItem");
+    console.log(response.data);
     return response.data;
 }
 
@@ -22,4 +21,10 @@ export const deleteTodo = async (id) => {
 
 export const updateTodo = async (updatedTodoItem) => {
     const response = await instance.put("/todoItem/" + updatedTodoItem.id, updatedTodoItem);
+    return response.data;
+}
+
+export const getTodoById = async (id) => {
+    const response = await instance.get("/todoItem/" + id);
+    return response.data;
 }

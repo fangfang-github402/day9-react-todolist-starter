@@ -22,7 +22,8 @@ const TodoGroup = () => {
         {showTodo.map((todo, index) => {
             return <TodoItem key={todo.id + index} todoItem={todo}/>
         })}
-        <Pagination current={page} total={state.length} pageSize={size} onChange={onChange} style={{justifyContent:"center",marginTop:"20px"}} onShowSizeChange={onShowSizeChange}/>    </div>)
+        <Pagination current={page} total={state.length} pageSize={size} onChange={onChange}
+                    style={{justifyContent: "center", marginTop: "20px"}} onShowSizeChange={onShowSizeChange}/></div>)
 }
 
 export default TodoGroup;

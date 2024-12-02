@@ -28,7 +28,7 @@ const TodoGenerator = () => {
     return (<div>
         <input value={text} maxLength={100} onChange={handleChange}/>
         <Button color="primary" variant="solid" onClick={handleAdd}>
-            <PlusOutlined />
+            <PlusOutlined/>
         </Button>
     </div>)
 }

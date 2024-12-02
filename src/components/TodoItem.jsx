@@ -11,7 +11,7 @@ const TodoItem = (props) => {
     const [newText, setNewText] = useState(props.todoItem.text);
     const handleDone = () => {
         const updatedTodoItem = {id: props.todoItem.id, text: props.todoItem.text, done: !props.todoItem.done};
-        updateTodo(updatedTodoItem).then((response)=>{
+        updateTodo(updatedTodoItem).then((response) => {
             dispatch({type: 'UPDATE', id: response.id, newText: response.text, done: response.done})
         })
     };
@@ -26,7 +26,7 @@ const TodoItem = (props) => {
             ...props.todoItem,
             text: newText
         };
-        updateTodo(updatedTodoItem).then((response)=>{
+        updateTodo(updatedTodoItem).then((response) => {
             dispatch({type: 'UPDATE', id: response.id, newText: response.text, done: response.done})
         })
         setIsModalOpen(false);

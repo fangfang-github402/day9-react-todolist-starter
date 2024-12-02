@@ -1,8 +1,6 @@
 import axios from "axios";
 import instance from "./interceptor";
 
-
-
 export const getTodoList = async () => {
     const response = await instance.get("/todoItem");
     console.log(response.data);
